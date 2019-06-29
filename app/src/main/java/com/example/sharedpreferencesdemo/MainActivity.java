@@ -1,13 +1,13 @@
 package com.example.sharedpreferencesdemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         Intent intent = new Intent(this,DisplayActivity.class);
+        startActivity(intent);
+    }
+
+    public void onDisplayPressed(View view) {
+        Intent intent = new Intent(this, DisplayActivity.class);
         startActivity(intent);
     }
 }
